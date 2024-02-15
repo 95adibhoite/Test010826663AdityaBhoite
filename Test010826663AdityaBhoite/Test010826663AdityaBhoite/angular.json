@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Test010826663AdityaBhoite:build:production"
+              "buildTarget": "Test010819372AdityaBhoite:build:production"
             },
             "development": {
-              "buildTarget": "Test010826663AdityaBhoite:build:development"
+              "buildTarget": "Test010819372AdityaBhoite:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Test010826663AdityaBhoite:build"
+            "buildTarget": "Test010819372AdityaBhoite:build"
           }
         },
         "test": {
