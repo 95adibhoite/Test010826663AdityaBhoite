@@ -1,0 +1,50 @@
+<!-- box-list.component.html -->
+<div class="box-form">
+  <h3>Add a New Box</h3>
+  <form (ngSubmit)="addNewBox()">
+    <div>
+      <label for="size">Size:</label>
+      <input type="number" id="size" name="size" [(ngModel)]="newBox.size" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="newBox.description" required></textarea>
+    </div>
+    <div>
+      <label for="shippingLabelCode">Shipping Label Code:</label>
+      <input type="text" id="shippingLabelCode" name="shippingLabelCode" [(ngModel)]="newBox.shippingLabelCode" required>
+    </div>
+    <div>
+      <label for="recipient">Recipient:</label>
+      <input type="text" id="recipient" name="recipient" [(ngModel)]="newBox.recipient">
+    </div>
+    <div>
+      <label for="weight">Weight:</label>
+      <input type="number" id="weight" name="weight" [(ngModel)]="newBox.weight" step="0.1" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+  <br>
+  <hr>
+
+
+<div *ngFor="let box of boxes" class="box">
+    <div>
+      <strong>Size:</strong> {{ box.size }}
+    </div>
+    <div>
+      <strong>Description:</strong> {{ box.description }}
+    </div>
+    <div>
+      <strong>Shipping Label Code:</strong> {{ box.shippingLabelCode | uppercase }}
+    </div>
+    <div>
+      <strong>Recipient:</strong> <span [style.color]="box.recipient ? 'black' : 'red'">{{ box.recipient || 'Aditya' }}</span>
+    </div>
+    <div>
+      <strong>Weight:</strong> {{ box.weight }}g
+    </div>
+    <hr />
+  </div>
+  
